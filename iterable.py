@@ -12,22 +12,3 @@ try:
         print(element)
 except StopIteration:
     pass  # L'itérateur est épuisé
-
-
-
-# Un Générateur est à la fois un itérable et un itérateur
-def generateur_simple():
-    yield 1
-    yield 2
-    yield 3
-
-# Utilisation comme un itérable
-for nombre in generateur_simple():
-    print(nombre)
-
-# Utilisation comme un itérateur
-gen = generateur_simple()
-print(next(gen))  # Affiche 1
-print(next(gen))  # Affiche 2
-print("autre action")
-print(next(gen))  # Affiche 3
